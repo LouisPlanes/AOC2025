@@ -59,7 +59,7 @@ pub fn part1() -> Result<(), Error> {
         }
     }
     println!("result part 1 :{}", result_part1);
-    println!("result part 1 :{}", result_part2);
+    println!("result part 2 :{}", result_part2);
 
     Ok(())
 }

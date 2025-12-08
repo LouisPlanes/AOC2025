@@ -4,6 +4,7 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day5;
 
 
 fn main() -> Result<()> {
@@ -20,6 +21,10 @@ fn main() -> Result<()> {
             2 => Ok(day2::part1()?),
             3 => Ok(day3::part1()?),
             4 => Ok(day4::part1()?),
-            _ => Ok(println!("Unknown day!")),
+            5 => Ok(day5::part1()?),
+            _ => {
+                println!("Unknown day!");
+                Ok(())
+            },
     }
 }

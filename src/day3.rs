@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader, Error};
 
-pub fn part1() -> Result<(), Error> {
+pub fn execute() -> Result<(), Error> {
     let file = File::open("ressources/day3")?;
 
     let reader = BufReader::new(file);

@@ -4,7 +4,7 @@ use std::fs::File;
 use std::io::{BufRead, BufReader};
 use std::ops::Range;
 
-pub fn part1() -> Result<()> {
+pub fn execute() -> Result<()> {
     let file = File::open("ressources/day5")?;
     // let file = File::open("ressources/day5example")?;
 

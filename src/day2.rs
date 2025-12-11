@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::{BufRead, BufReader, Error};
 use std::ops::Range;
 
-pub fn part1() -> Result<(), Error> {
+pub fn execute() -> Result<(), Error> {
     let file = File::open("ressources/day2")?;
 
     let reader = BufReader::new(file);

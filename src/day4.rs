@@ -46,8 +46,7 @@ impl Storage {
         data.len();
 
         Ok(Storage {
-            cols: data
-                .get(0)
+            cols: data.first()
                 .expect("there should be at least one line")
                 .len(),
             rows: data.len(),
@@ -108,12 +107,9 @@ impl Storage {
                 let current_box = self
                     .get_internal_mut(col, row)
                     .expect("Box should exist at this place");
-                match current_box {
-                    Box::ToRemove => {
-                        *current_box = Absent;
-                        result = true
-                    }
-                    _ => {}
+                if let Box::ToRemove = current_box {
+                    *current_box = Absent;
+                    result = true
                 }
             }
         }
@@ -121,7 +117,7 @@ impl Storage {
     }
 }
 
-pub fn part1() -> Result<()> {
+pub fn execute() -> Result<()> {
     let file = File::open("ressources/day4")?;
 
     let mut storage = Storage::new_from_file(file)?;

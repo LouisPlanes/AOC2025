@@ -33,7 +33,7 @@ pub fn execute() -> Result<(), Error> {
                     }
                 };
 
-                dial = dial + added;
+                dial += added;
                 while dial < 0 {
                     dial += 100;
                     result_part2 += 1
@@ -41,7 +41,7 @@ pub fn execute() -> Result<(), Error> {
 
                 while dial >= 100 {
                     dial -= 100;
-                    if !(dial == 0) {
+                    if (dial != 0) {
                         result_part2 += 1
                     }
                 }

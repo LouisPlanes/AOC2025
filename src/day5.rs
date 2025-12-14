@@ -31,7 +31,7 @@ pub fn execute() -> Result<()> {
         .map(|ingredient| {
             match ranges
                 .iter()
-                .filter(|range| range.contains(&ingredient))
+                .filter(|range| range.contains(ingredient))
                 .peekable()
                 .peek()
             {

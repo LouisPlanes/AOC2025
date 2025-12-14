@@ -44,7 +44,7 @@ pub fn execute() -> Result<(), Error> {
         acc_part2 += joltage;
     }
 
-    println!("result part 1 = {}", "removed!");
+    println!("result part 1 = removed!");
     println!("result part 2 = {}", acc_part2);
     Ok(())
 }

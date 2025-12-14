@@ -1,8 +1,6 @@
 use anyhow::Result;
-use std::cmp::{max, min};
 use std::fs::File;
 use std::io::{BufRead, BufReader};
-use std::ops::Range;
 
 pub fn execute() -> Result<()> {
     let file = File::open("ressources/day7")?;
